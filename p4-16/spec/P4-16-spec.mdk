@@ -5510,7 +5510,8 @@ selectCase
 ~ End P4Grammar
 
 In a `select` expression, if the `expressionList` has type `tuple<T>`,
-then each `keysetExpression` must have type `set<tuple<T>>`.
+then each `keysetExpression` must have type `set<tuple<T>>`.  Each
+expression in the `expressionList` must have a `bit<W>` or `int<W>` type.
 
 In terms of the `ParserModel`, the meaning of a select expression:
 
@@ -8081,11 +8082,11 @@ The P4 compiler should provide:
 |           |               | semantics of invalid header stacks; clarified initialization      |
 |           |               | semantics; fixed several small issues in grammar.                 |
 |-----|-----|-----|
-| 1.2.2     | May 17, 2021 | Added support for tuple access, generic structures, additional     | 
-|           |              | enumeration types, abstract methods, conditional and empty         | 
-|           |              | statements in parsers, additional casts, and 0-width types;        | 
+| 1.2.2     | May 17, 2021 | Added support for tuple access, generic structures, additional     |
+|           |              | enumeration types, abstract methods, conditional and empty         |
+|           |              | statements in parsers, additional casts, and 0-width types;        |
 |           |              | clarified semantics of default actions, headers, empty types, and  |
-|           |              | action data; fixed typos and inconsistencies in the grammar.       | 
+|           |              | action data; fixed typos and inconsistencies in the grammar.       |
 |-----|-----|-----|
 
 ## Summary of changes made in version 1.2.2
