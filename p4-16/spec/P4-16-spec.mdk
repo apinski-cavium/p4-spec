@@ -5511,7 +5511,10 @@ selectCase
 
 In a `select` expression, if the `expressionList` has type `tuple<T>`,
 then each `keysetExpression` must have type `set<tuple<T>>`.  Each
-expression in the `expressionList` must have a `bit<W>` or `int<W>` type.
+expression in the `expressionList` must have a type of `bit<W>`,
+`int<W>`, `bool`, `enum`, serializable `enum`, or a `tuple` type 
+with fields of one of the above types.
+
 
 In terms of the `ParserModel`, the meaning of a select expression:
 
